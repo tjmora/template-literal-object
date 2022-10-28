@@ -125,19 +125,19 @@ const DefaultStyle = TLO.styled`
   display: block;
   width: 100%;
   background-color: ${props => props.theme.card.color.background};
-`
+`;
 
 const SomeStyleFromSomewhereElse = TLO.styled`
   display: inline-block;
   color: ${props => props.theme.card.color.textPrimary};
-`
+`;
 
-DefaultStyle.append(SomeStyleFromSomewhereElse)
+DefaultStyle.append(SomeStyleFromSomewhereElse);
 
 const CardComponent = styled.div(
   DefaultStyle.stringParts, 
   ...DefaultStyle.interpolations
-)
+);
 ```
 
 </details>
