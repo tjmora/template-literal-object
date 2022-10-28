@@ -9,7 +9,8 @@ all the interpolations.
 
 ## Usage
 
-Works well with Typescript. Tried making it work for Javascript but I can't make it work.
+<details>
+<summary>Typescript</summary>
 
 ```typescript
 import TLO from "@tjmora/template-literal-object"
@@ -46,11 +47,47 @@ test(obj1.stringParts as any as TemplateStringsArray, ...obj1.interpolations)
 //]
 //[ 'World and', 101, 'World and', 102 ]
 ```
+</details>
+
+<details>
+<summary>Javascript</summary>
+
+```javascript
+const { TLO } = require("@tjmora/template-literal-object");
+
+let obj1 = TLO.set`
+  Hello
+  ${"World" + " and"}
+  Asia
+  ${100 + 1}
+`;
+
+let obj2 = TLO.set`
+  Hello
+  ${"World" + " and"}
+  the Philippines
+  ${100 + 2}
+`;
+
+obj1.append(obj2);
+
+function test(stringParts, ...interpolations) {
+  console.log(stringParts);
+  console.log(interpolations);
+}
+
+test(obj1.stringParts, ...obj1.interpolations);
+```
+
+</details>
 
 ### USAGE for styled-components
 
 Use the `styled` method instead of the `set` method. The `styled` method has a more 
 limited allowed types for interpolations.
+
+<details>
+<summary>Typescript</summary>
 
 ```typescript
 import TLO from "@tjmora/template-literal-object"
@@ -74,3 +111,33 @@ const CardComponent = styled.div(
   ...DefaultStyle.interpolations
 )
 ```
+
+</details>
+
+<details>
+<summary>Typescript</summary>
+
+```javascript
+const { TLO } = require("@tjmora/template-literal-object");
+import styled from "styled-components";
+
+const DefaultStyle = TLO.styled`
+  display: block;
+  width: 100%;
+  background-color: ${props => props.theme.card.color.background};
+`
+
+const SomeStyleFromSomewhereElse = TLO.styled`
+  display: inline-block;
+  color: ${props => props.theme.card.color.textPrimary};
+`
+
+DefaultStyle.append(SomeStyleFromSomewhereElse)
+
+const CardComponent = styled.div(
+  DefaultStyle.stringParts as any as TemplateStringsArray, 
+  ...DefaultStyle.interpolations
+)
+```
+
+</details>
