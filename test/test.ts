@@ -1,4 +1,4 @@
-import TLO from "../src/index"
+import TLO from "../lib"
 
 let obj1 = TLO.set`
   Hello

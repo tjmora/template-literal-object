@@ -9,6 +9,8 @@ all the interpolations.
 
 ## Usage
 
+Works well with Typescript. Tried making it work for Javascript but I can't make it work.
+
 ```typescript
 import TLO from "@tjmora/template-literal-object"
 
