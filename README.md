@@ -45,7 +45,7 @@ test(obj1.stringParts as any as TemplateStringsArray, ...obj1.interpolations)
 //[ 'World and', 101, 'World and', 102 ]
 ```
 
-### USAGE for STYLED-COMPONENTS
+### USAGE for styled-components
 
 Use the `styled` method instead of the `set` method. The `styled` method has a more 
 limited allowed types for interpolations.
