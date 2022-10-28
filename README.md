@@ -52,6 +52,7 @@ limited allowed types for interpolations.
 
 ```typescript
 import TLO from "@tjmora/template-literal-object"
+import styled from "styled-components"
 
 const DefaultStyle = TLO.styled`
   display: block;

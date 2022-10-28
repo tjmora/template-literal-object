@@ -1,6 +1,6 @@
 {
   "name": "@tjmora/template-literal-object",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "TJ Mora",
   "license": "MIT",
   "description": "Object that can represent a template literal.",
