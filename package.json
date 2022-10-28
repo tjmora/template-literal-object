@@ -1,16 +1,24 @@
 {
   "name": "@tjmora/template-literal-object",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "author": "TJ Mora",
+  "license": "MIT",
   "description": "Object that can represent a template literal.",
+  "keywords": ["template literal"],
+  "homepage": "https://github.com/tjmora/template-literal-object",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjmora/template-literal-object"
+  },
+  "bugs": {
+    "url": "https://github.com/tjmora/template-literal-object/issues"
+  },
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "TJ Mora",
-  "license": "MIT",
   "devDependencies": {
     "typescript": "^4.8.4"
   }
