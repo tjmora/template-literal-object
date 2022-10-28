@@ -115,7 +115,7 @@ const CardComponent = styled.div(
 </details>
 
 <details>
-<summary>Typescript</summary>
+<summary>Javascript</summary>
 
 ```javascript
 const { TLO } = require("@tjmora/template-literal-object");
@@ -135,7 +135,7 @@ const SomeStyleFromSomewhereElse = TLO.styled`
 DefaultStyle.append(SomeStyleFromSomewhereElse)
 
 const CardComponent = styled.div(
-  DefaultStyle.stringParts as any as TemplateStringsArray, 
+  DefaultStyle.stringParts, 
   ...DefaultStyle.interpolations
 )
 ```
