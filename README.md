@@ -144,4 +144,5 @@ const CardComponent = styled.div(
 
 ### VS Code extension for TLO.styled
 
-The extension is available at the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled).
+The extension (a fork of vscode-styled-components) is available at 
+the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled).
