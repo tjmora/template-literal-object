@@ -10,10 +10,8 @@ export default class TLO {
     return this;
   }
   public append(other: TLO) {
-    if (this.stringParts.length > this.interpolations.length) {
-      this.stringParts[this.stringParts.length - 1] += other.stringParts[0];
-      this.stringParts.push(...other.stringParts.slice(1));
-    } else this.stringParts.push(...other.stringParts);
+    this.stringParts[this.stringParts.length - 1] += other.stringParts[0];
+    this.stringParts.push(...other.stringParts.slice(1));
     this.interpolations.push(...other.interpolations);
     return this;
   }
