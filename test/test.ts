@@ -21,4 +21,4 @@ function test(stringParts: TemplateStringsArray, ...interpolations: any[]) {
   console.log(interpolations)
 }
 
-test(obj1.stringParts as any as TemplateStringsArray, ...obj1.interpolations)
+test(...obj1.literal())

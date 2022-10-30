@@ -9,8 +9,7 @@ all the interpolations.
 
 ## Usage
 
-<details>
-<summary>Typescript</summary>
+Typescript
 
 ```typescript
 import TLO from "@tjmora/template-literal-object"
@@ -36,7 +35,7 @@ function test(stringParts: TemplateStringsArray, ...interpolations: any[]) {
   console.log(interpolations)
 }
 
-test(obj1.stringParts as any as TemplateStringsArray, ...obj1.interpolations)
+test(...obj1.literal())
 // This logs the following:
 // [
 //  '\n  Hello\n  ',
@@ -47,10 +46,9 @@ test(obj1.stringParts as any as TemplateStringsArray, ...obj1.interpolations)
 //]
 //[ 'World and', 101, 'World and', 102 ]
 ```
-</details>
 
 <details>
-<summary>Javascript</summary>
+<summary>Show usage in Javascript</summary>
 
 ```javascript
 const TLO = require("@tjmora/template-literal-object").default;
@@ -76,7 +74,7 @@ function test(stringParts, ...interpolations) {
   console.log(interpolations);
 }
 
-test(obj1.stringParts, ...obj1.interpolations);
+test(...obj1.literal());
 ```
 
 </details>
@@ -86,8 +84,7 @@ test(obj1.stringParts, ...obj1.interpolations);
 Use the `styled` method instead of the `set` method. The `styled` method has a more 
 limited allowed types for interpolations.
 
-<details>
-<summary>Typescript</summary>
+Typescript
 
 ```typescript
 import TLO from "@tjmora/template-literal-object"
@@ -106,16 +103,11 @@ const SomeStyleFromSomewhereElse = TLO.styled`
 
 DefaultStyle.append(SomeStyleFromSomewhereElse)
 
-const CardComponent = styled.div(
-  DefaultStyle.stringParts as any as TemplateStringsArray, 
-  ...DefaultStyle.interpolations
-)
+const CardComponent = styled.div(...DefaultStyle.literal())
 ```
 
-</details>
-
 <details>
-<summary>Javascript</summary>
+<summary>Show usage in Javascript</summary>
 
 ```javascript
 const TLO = require("@tjmora/template-literal-object").default;
@@ -134,15 +126,12 @@ const SomeStyleFromSomewhereElse = TLO.styled`
 
 DefaultStyle.append(SomeStyleFromSomewhereElse);
 
-const CardComponent = styled.div(
-  DefaultStyle.stringParts, 
-  ...DefaultStyle.interpolations
-);
+const CardComponent = styled.div(...DefaultStyle.literal());
 ```
 
 </details>
 
 ### VS Code extension for TLO.styled
 
-The extension (a fork of vscode-styled-components) is available at 
-the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled).
+A linter and intellisense for TLO.styled is available at 
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled).

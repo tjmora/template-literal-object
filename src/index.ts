@@ -17,6 +17,9 @@ export default class TLO {
     this.interpolations.push(...other.interpolations);
     return this;
   }
+  public literal(): [TemplateStringsArray, ...any[]] {
+    return [this.stringParts as any as TemplateStringsArray, ...this.interpolations];
+  }
   static set(stringParts: TemplateStringsArray, ...interpolations: any[]) {
     return new TLO(stringParts, ...interpolations);
   }
