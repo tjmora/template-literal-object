@@ -132,3 +132,7 @@ const CardComponent = styled.div(...DefaultStyle.parts());
 ```
 
 </details>
+
+## Test
+
+[The test is a separate repo](https://github.com/tjmora/template-literal-object-test).
