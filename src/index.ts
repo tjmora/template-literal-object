@@ -1,4 +1,4 @@
-export class TLO {
+export default class TLO {
   public stringParts: string[] = [];
   public interpolations: any[] = [];
   public constructor(
@@ -27,5 +27,3 @@ export class TLO {
     return new TLO(stringParts, ...interpolations);
   }
 }
-
-export default TLO;

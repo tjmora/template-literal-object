@@ -53,7 +53,7 @@ test(obj1.stringParts as any as TemplateStringsArray, ...obj1.interpolations)
 <summary>Javascript</summary>
 
 ```javascript
-const { TLO } = require("@tjmora/template-literal-object");
+const TLO = require("@tjmora/template-literal-object").default;
 
 let obj1 = TLO.set`
   Hello
@@ -118,7 +118,7 @@ const CardComponent = styled.div(
 <summary>Javascript</summary>
 
 ```javascript
-const { TLO } = require("@tjmora/template-literal-object");
+const TLO = require("@tjmora/template-literal-object").default;
 import styled from "styled-components";
 
 const DefaultStyle = TLO.styled`

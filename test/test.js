@@ -1,4 +1,4 @@
-const { TLO } = require("../lib/index");
+const TLO = require("../lib/index.js").default;
 
 let obj1 = TLO.set`
   Hello

@@ -1,4 +1,4 @@
-export declare class TLO {
+export default class TLO {
     stringParts: string[];
     interpolations: any[];
     constructor(stringParts: TemplateStringsArray, ...interpolations: any[]);
@@ -6,4 +6,3 @@ export declare class TLO {
     static set(stringParts: TemplateStringsArray, ...interpolations: any[]): TLO;
     static styled(stringParts: TemplateStringsArray, ...interpolations: (string | number | ((prop: any) => {}))[]): TLO;
 }
-export default TLO;
