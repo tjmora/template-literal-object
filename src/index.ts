@@ -1,6 +1,6 @@
 export default class TLO {
-  public stringParts: string[] = [];
-  public interpolations: any[] = [];
+  private stringParts: string[] = [];
+  private interpolations: any[] = [];
   public constructor(
     stringParts: TemplateStringsArray,
     ...interpolations: any[]
@@ -15,7 +15,7 @@ export default class TLO {
     this.interpolations.push(...other.interpolations);
     return this;
   }
-  public literal(): [TemplateStringsArray, ...any[]] {
+  public parts(): [TemplateStringsArray, ...any[]] {
     return [this.stringParts as any as TemplateStringsArray, ...this.interpolations];
   }
   static set(stringParts: TemplateStringsArray, ...interpolations: any[]) {

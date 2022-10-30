@@ -35,7 +35,7 @@ function test(stringParts: TemplateStringsArray, ...interpolations: any[]) {
   console.log(interpolations)
 }
 
-test(...obj1.literal())
+test(...obj1.parts())
 // This logs the following:
 // [
 //  '\n  Hello\n  ',
@@ -74,7 +74,7 @@ function test(stringParts, ...interpolations) {
   console.log(interpolations);
 }
 
-test(...obj1.literal());
+test(...obj1.parts());
 ```
 
 </details>
@@ -105,7 +105,7 @@ const SomeStyleFromSomewhereElse = TLO.styled`
 
 DefaultStyle.append(SomeStyleFromSomewhereElse)
 
-const CardComponent = styled.div(...DefaultStyle.literal())
+const CardComponent = styled.div(...DefaultStyle.parts())
 ```
 
 <details>
@@ -128,7 +128,7 @@ const SomeStyleFromSomewhereElse = TLO.styled`
 
 DefaultStyle.append(SomeStyleFromSomewhereElse);
 
-const CardComponent = styled.div(...DefaultStyle.literal());
+const CardComponent = styled.div(...DefaultStyle.parts());
 ```
 
 </details>
