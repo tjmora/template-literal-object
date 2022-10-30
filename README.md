@@ -82,7 +82,9 @@ test(...obj1.literal());
 ### USAGE for styled-components
 
 Use the `styled` method instead of the `set` method. The `styled` method has a more 
-limited allowed types for interpolations.
+limited allowed types for interpolations. Also, there's a 
+[linter and intellisense for TLO.styled](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled), 
+that doesn't work for `TLO.set`.
 
 Typescript
 
@@ -130,8 +132,3 @@ const CardComponent = styled.div(...DefaultStyle.literal());
 ```
 
 </details>
-
-### VS Code extension for TLO.styled
-
-A linter and intellisense for TLO.styled is available at 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled).
