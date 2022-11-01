@@ -16,6 +16,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "prepublish": "npx tsc",
     "build": "npx tsc"
   },
   "devDependencies": {
