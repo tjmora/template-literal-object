@@ -29,7 +29,7 @@ let obj2 = TLO.set`
 
 obj1.append(obj2);
 
-// Remove the parameter types for Javascript
+// Define a tag function
 function test(stringParts: TemplateStringsArray, ...interpolations: any[]) {
   console.log(stringParts);
   console.log(interpolations);
