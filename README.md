@@ -50,9 +50,11 @@ test(...obj1.parts());
 ### USAGE for styled-components
 
 Use the `styled` method instead of the `set` method. The `styled` method has a more
-limited set of allowed types for interpolations. Also, there's a
-[syntax highlighter and IntelliSense for TLO.styled](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled),
-that doesn't work for `TLO.set`.
+limited set of allowed types for interpolations. 
+
+> **_NOTE:_** there's also a 
+> [syntax highlighter and IntelliSense for TLO.styled](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled).
+> It doesn't work for `TLO.set`.
 
 ```typescript
 import TLO from "@tjmora/template-literal-object"; // for Typescript
@@ -72,5 +74,5 @@ const SomeStyleFromSomewhereElse = TLO.styled`
 
 DefaultStyle.append(SomeStyleFromSomewhereElse);
 
-const CardComponent = styled.div(...DefaultStyle.parts());
+const SomeComponent = styled.div(...DefaultStyle.parts());
 ```
