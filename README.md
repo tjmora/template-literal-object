@@ -1,4 +1,4 @@
-# Template Literal Object
+# @tjmora/template-literal-object
 
 An object that can represent a template string literal, including all its string parts and
 all the interpolations.
@@ -12,6 +12,12 @@ all the interpolations.
 ```typescript
 import TLO from "@tjmora/template-literal-object"; // for Typescript
 // const TLO = require("@tjmora/template-literal-object").default; // for Javascript
+
+// Let's define a tag function for demo
+function test(stringParts: TemplateStringsArray, ...interpolations: any[]) {
+  console.log(stringParts);
+  console.log(interpolations);
+}
 
 let obj1 = TLO.set`
   Hello
@@ -27,13 +33,7 @@ let obj2 = TLO.set`
   ${100 + 2}
 `;
 
-obj1.append(obj2);
-
-// Define a tag function
-function test(stringParts: TemplateStringsArray, ...interpolations: any[]) {
-  console.log(stringParts);
-  console.log(interpolations);
-}
+obj1.append(obj2); // appends obj2 to obj1
 
 test(...obj1.parts());
 // This logs the following:
@@ -50,8 +50,8 @@ test(...obj1.parts());
 ### USAGE for styled-components
 
 Use the `styled` method instead of the `set` method. The `styled` method has a more
-limited allowed types for interpolations. Also, there's a
-[linter and intellisense for TLO.styled](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled),
+limited set of allowed types for interpolations. Also, there's a
+[syntax highlighter and IntelliSense for TLO.styled](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled),
 that doesn't work for `TLO.set`.
 
 ```typescript
@@ -74,7 +74,3 @@ DefaultStyle.append(SomeStyleFromSomewhereElse);
 
 const CardComponent = styled.div(...DefaultStyle.parts());
 ```
-
-## Test
-
-[The test for this package is a separate repo](https://github.com/tjmora/template-literal-object-test).

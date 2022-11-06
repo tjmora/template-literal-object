@@ -1,0 +1,14 @@
+{
+  "name": "tlo-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js && ts-node test.ts"
+  },
+  "author": "TJ Mora",
+  "license": "MIT",
+  "dependencies": {
+    "@tjmora/template-literal-object": "^1.1.9"
+  }
+}
