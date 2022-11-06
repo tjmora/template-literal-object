@@ -47,14 +47,14 @@ test(...obj1.parts());
 //[ 'World and', 101, 'World and', 102 ]
 ```
 
-### USAGE for styled-components
+### USAGE in CSS-in-JS libraries (e.g., styled-components)
 
 Use the `styled` method instead of the `set` method. The `styled` method has a more
 limited set of allowed types for interpolations. 
 
-> **_NOTE:_** there's also a 
+> **_NOTE:_** There's also a 
 > [syntax highlighter and IntelliSense for TLO.styled](https://marketplace.visualstudio.com/items?itemName=tjmora.vscode-tlo-styled).
-> It doesn't work for `TLO.set`.
+> One more reason to use the `styled` method instead of the `set` method when dealing with CSS-in-JS.
 
 ```typescript
 import TLO from "@tjmora/template-literal-object"; // for Typescript
