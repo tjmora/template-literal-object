@@ -1,4 +1,4 @@
-const TLO = require("@tjmora/template-literal-object").default;
+const TLO = require("../").default;
 
 let obj1 = TLO.set`
   Hello

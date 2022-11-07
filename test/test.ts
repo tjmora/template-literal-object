@@ -1,4 +1,4 @@
-import TLO from "@tjmora/template-literal-object";
+import TLO from "../";
 
 let obj1 = TLO.set`
   Hello
