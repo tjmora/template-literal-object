@@ -5,7 +5,9 @@ all the interpolations.
 
 ## Installation
 
-`npm i @tjmora/template-literal-object`
+```
+npm i @tjmora/template-literal-object
+```
 
 ## Usage
 
